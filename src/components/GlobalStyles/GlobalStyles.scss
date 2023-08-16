@@ -1,11 +1,12 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
     --primary: #333;
     --black: #000;
     --white: #fff;
     --blue: #0089ff;
+    --red: #ed1c24;
     --font-family: 'Roboto', sans-serif;
 
     //DefaultLayout
@@ -57,6 +58,10 @@ input,
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+li {
+    list-style: none;
 }
 
 //Custom tippy tooltips
@@ -221,7 +226,7 @@ body {
 /* Tablet and PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
     .wide {
-        width: 644px;
+        width: 800px;
     }
 }
 

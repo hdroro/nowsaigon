@@ -1,0 +1,47 @@
+.container {
+    padding: 35px 0;
+}
+
+.img-item {
+    width: 100%;
+    height: 100%;
+}
+
+.item-product:hover {
+    cursor: pointer;
+}
+
+.product-info {
+    padding: 0;
+    width: 100%;
+    float: left;
+    margin: 20px 0px 15px;
+    position: relative;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 5px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 5px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+
+    &:hover {
+        color: var(--blue);
+    }
+}
+
+.special-price {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #363636;
+    font-weight: 700;
+    margin-right: 10px;
+}
