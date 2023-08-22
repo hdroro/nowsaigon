@@ -1,0 +1,117 @@
+.table-cart {
+    border: 1px #ebebeb solid;
+    font-size: 15px;
+    /* margin-bottom: 0px; */
+    font-size: 13px;
+    line-height: 37px;
+    color: #252525;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.thead-default {
+    color: #333333;
+    text-align: center;
+    border: #ebebeb thin solid;
+    line-height: 1.5;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ebebeb;
+    min-width: 60px;
+}
+
+.thead-default tr {
+    color: #333333;
+    text-align: center;
+    border: #ebebeb thin solid;
+    line-height: 1.5;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ebebeb;
+    min-width: 60px;
+}
+
+.thead-default th {
+    padding: 5px;
+    font-size: 14px;
+    color: #55595c;
+    background-color: #eceeef;
+    text-align: center;
+    font-weight: 400;
+}
+
+.content-table {
+    text-align: center;
+}
+
+.title {
+    margin: 0 0 15px 0;
+    /* padding: 15px 0px 0px; */
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 12px;
+    padding-right: 15px;
+}
+
+.account-name {
+    padding: 0 12px 0 15px;
+    font-size: 14px;
+
+    a {
+        color: #ed1c24;
+    }
+}
+
+.block-account {
+    padding: 20px;
+    border: 1px #ebebeb solid;
+    border-radius: 5px;
+}
+
+.block-title-account {
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+
+    h5 {
+        font-size: 18px;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 500;
+    }
+}
+
+.block-content p {
+    margin: 10px 0px;
+    line-height: 24px;
+    padding: 0px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.icon-account {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    color: #ed1c24;
+    float: left;
+    line-height: 24px;
+}
+
+.btn-readmore {
+    display: inline-block;
+    height: 40px;
+    line-height: 39px;
+    padding: 0 20px;
+    text-align: center;
+    white-space: nowrap;
+    outline: none !important;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    background: #ed1c24;
+    color: #fff;
+}

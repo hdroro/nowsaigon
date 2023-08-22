@@ -1,0 +1,34 @@
+.title-head {
+    font-size: 20px;
+    text-transform: uppercase;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    &:hover {
+        text-decoration: underline;
+        color: #ed1c24;
+    }
+}
+.content-top {
+    line-height: 1.7;
+    font-size: 14px;
+    color: #333;
+}
+
+.content-page p {
+    margin-bottom: 15px;
+}
+
+.content-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Calibri Light', sans-serif;
+    font-size: 13pt;
+    line-height: 24px;
+}
+
+.line {
+    margin: 40px 0;
+}

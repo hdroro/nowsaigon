@@ -16,7 +16,7 @@
 .list-right {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    float: right;
 }
 
 .list-item {
@@ -47,6 +47,9 @@
     }
 }
 
+.header-nav {
+    margin-bottom: 5px;
+}
 .menu-bar {
     padding-right: 15px;
     margin-left: 15px;
@@ -84,7 +87,7 @@
     text-transform: uppercase;
 }
 
-.nav-item:last-child {
+.nav-item-sale {
     background-color: #ed1c24;
     color: rgba(55, 55, 55, 0.8);
 
@@ -96,14 +99,6 @@
 .icon-caret-down {
     font-size: 13px;
     margin-left: 6px;
-}
-
-.line-straight {
-    width: 50px;
-    height: 2px;
-    background: var(--red);
-    margin-top: 10px;
-    margin-left: 47%;
 }
 
 // nav-right
@@ -141,4 +136,24 @@
     .header-logo::after {
         display: none;
     }
+}
+
+// tippy
+.menu {
+    width: 235px;
+
+    padding: 0px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    z-index: 9;
+
+    .menu-item {
+        margin-left: 0;
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+    width: 200px;
 }

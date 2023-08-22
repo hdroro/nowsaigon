@@ -1,0 +1,51 @@
+.wrapper {
+    margin-bottom: 60px;
+}
+
+.title-head {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.content-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.block_fonticon {
+    display: flex;
+    float: left;
+    width: 30px;
+    text-align: left;
+    margin-right: 10px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ed1c24;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.icon-li {
+    margin-left: 1px;
+    font-size: 15px;
+    color: #ed1c24;
+}
+
+.content-page li {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    color: #707070;
+}
+
+.phone-number {
+    color: #ed1c24;
+    cursor: pointer;
+}

@@ -1,17 +1,17 @@
-import classNames from 'classnames/bind';
-import styles from './DefaultLayout.module.scss';
 import Header from '../components/Header/Header';
 import PropTypes from 'prop-types';
-
-const cx = classNames.bind(styles);
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
+import Footer from '../components/Footer/Footer';
 
 function DefaultLayout({ children }) {
     return (
-        <div className={cx('wrapper')}>
+        <div>
             <Header />
-            <div className={cx('container')}>
-                <div className={cx('content')}>{children}</div>
+            <Breadcrumb />
+            <div>
+                <div>{children}</div>
             </div>
+            <Footer />
         </div>
     );
 }
