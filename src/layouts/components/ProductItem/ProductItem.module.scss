@@ -1,57 +1,3 @@
-.category-products {
-    padding-bottom: 20px;
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 0.5px;
-        background: #e1e1e1;
-        bottom: 0;
-    }
-}
-
-.title_page {
-    font-size: 18px;
-}
-
-.sortpage {
-    float: right;
-    font-size: 12px;
-    text-align: left;
-    display: flex;
-}
-
-.sort-left {
-    float: left;
-    line-height: 38px;
-    font-size: 14px;
-    margin-right: 6px;
-    margin-bottom: 0;
-}
-
-.border_sort {
-    float: left;
-    width: 150px;
-    /* border: solid 1px #ebebeb; */
-    height: 35px;
-    line-height: 30px;
-}
-
-.border_sort select {
-    float: left;
-    width: 150px;
-    border: solid 1px #ebebeb;
-    height: 35px;
-    line-height: 30px;
-
-    outline: none;
-    cursor: pointer;
-}
-
-//
-
 .product-box {
     height: 100%;
 
@@ -72,17 +18,39 @@
         }
     }
 }
-.products-list {
-    margin-top: 35px;
+
+.item-product {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .item-product:hover {
     cursor: pointer;
 }
 
-.img-item {
+.img-item,
+.img-item-back {
     width: 100%;
     height: 100%;
+}
+
+.img-item-back {
+    display: none;
+
+    transition: display 3ms ease-in-out;
+}
+
+.btn-group {
+    position: absolute;
+    opacity: 0; /* Ban đầu ẩn .btn-group */
+    transform: scale(0.1); /* Thu nhỏ .btn-group ban đầu */
+    transform-origin: center center; /* Đặt điểm gốc để làm hiệu ứng scale từ trung tâm */
+
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .product-info {

@@ -3,6 +3,7 @@ import styles from './Account.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faHome, faLocationDot, faMobile, faPlane } from '@fortawesome/free-solid-svg-icons';
 import { faYelp } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -20,7 +21,7 @@ function Account() {
                             </div>
                             <div className={cx('account-name')}>
                                 <strong>
-                                    Xin chào, <a href="/account/address">Diễm Nguyễn Thị </a>!
+                                    Xin chào, <a href="/account/addresses">Diễm Nguyễn Thị </a>!
                                 </strong>
                             </div>
                             <div className={cx('col l-12 m-12 c-12')}>
@@ -84,9 +85,9 @@ function Account() {
                                     </p>
 
                                     <p>
-                                        <a href="/account/addresses" className={cx('btn-readmore')}>
+                                        <Link to="/account/addresses" className={cx('btn-readmore')}>
                                             Sổ địa chỉ 0
-                                        </a>
+                                        </Link>
                                     </p>
                                 </div>
                             </div>

@@ -1,0 +1,205 @@
+.modal-wrapper {
+    position: fixed;
+    right: 0;
+    top: 0 !important;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: absolute;
+    width: 1030px;
+    top: 3%;
+    height: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 35px 30px 35px;
+    background-color: #fff;
+    z-index: 8011;
+    border-radius: 0px;
+}
+
+.product-left {
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: solid 1px #ebebeb;
+}
+
+.view-full-size {
+    position: relative;
+    max-width: 350px;
+    display: block;
+    margin: 0 40px;
+    padding: 10px;
+}
+.product-featured-image-quickview {
+    width: 100%;
+}
+
+.head-product-view h3 {
+    /* display: block; */
+    margin: 0px 0px 10px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #333;
+}
+
+.text2line {
+    display: block;
+
+    &:hover {
+        color: var(--blue);
+    }
+}
+
+.quickview-product {
+    padding-bottom: 0px;
+    width: 100%;
+    float: left;
+}
+
+.vender-title,
+.vender-status {
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #707070;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.vender-name,
+.status-name {
+    color: #0089ff;
+    font-weight: 400;
+}
+
+.prices {
+    width: 100%;
+    float: left;
+    padding-bottom: 5px;
+    margin: 20px 0px;
+}
+
+.price {
+    font-weight: 700;
+    color: #363636;
+    font-size: 30px;
+    line-height: 24px;
+    margin-right: 10px;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    color: #707070;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.view-more {
+    font-size: 14px;
+    color: #ed1c24;
+    font-weight: 400;
+}
+
+.swatch-clearfix {
+    margin: 20px 0 0;
+}
+
+.swatch-clearfix .header {
+    margin: 0px 0px 10px;
+    text-align: left;
+    min-width: 100px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #707070;
+}
+
+.form-size {
+    display: flex;
+}
+.swatch-element {
+    margin: 0px 6px 0 0;
+}
+
+.swatch-clearfix .swatch-element {
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    label {
+        line-height: 30px;
+        margin-bottom: 5px;
+        font-weight: 400;
+        border: 1px solid #dddddd;
+        padding: 4px 15px;
+        cursor: pointer;
+    }
+}
+
+.quantity-wanted-p {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.input-number-product {
+    margin-bottom: 0px;
+    float: left;
+    display: flex;
+    border: 1px solid #dddddd;
+    margin-right: 20px;
+}
+
+.input-left {
+    border-right: 1px solid #dddddd;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.input-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 5px 10px; */
+    position: relative;
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upper {
+    display: block;
+    border-bottom: 1px solid #dddddd;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    background: transparent;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}

@@ -1,0 +1,76 @@
+.head-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.title-head {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    /* line-height: 10px; */
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0px;
+    align-self: center;
+}
+
+.back-account {
+    color: #ed1c24 !important;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.icon-arrow-left {
+    margin-right: 5px;
+}
+
+.btn-add-addresses {
+    margin: 0 0 40px 0;
+}
+
+.btn-address {
+    line-height: 40px;
+    padding: 0 20px;
+    background: #ed1c24;
+    color: #fff;
+    cursor: pointer;
+}
+.add-address {
+    margin-top: 30px;
+}
+
+.total-addresses {
+    padding-left: 10px;
+    position: relative;
+    padding-top: 30px;
+    line-height: 2;
+    color: #333;
+
+    &::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        height: 0.5px;
+        background: #ebebeb;
+        top: 0;
+    }
+}
+
+.address-info p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.btn-update {
+    line-height: 40px;
+    padding: 0 20px;
+    background: #ed1c24;
+    color: #fff;
+    cursor: pointer;
+}
+
+.address-update-form {
+    margin-top: -30px;
+}

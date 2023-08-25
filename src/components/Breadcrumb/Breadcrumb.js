@@ -8,6 +8,7 @@ function Breadcrumb() {
     const location = useLocation();
 
     const crumbs = location.pathname.split('/');
+
     return (
         <div>
             {location.pathname !== '/' ? (
