@@ -6,13 +6,13 @@ import Modal from '../Modal/Modal';
 
 const cx = classNames.bind(styles);
 
-function ProductItem() {
+function ProductItem({ isSalePrice, decPercent }) {
     const { isShowing, toggle } = useModal();
 
     return (
         <>
-            <Modal isShowing={isShowing} toggle={true} />
             <div className={cx('product-box')}>
+                {isSalePrice && <div className={cx('sale-top-right')}>- 52%</div>}
                 <div className={cx('item-product')}>
                     <img
                         className={cx('img-item')}
@@ -45,6 +45,11 @@ function ProductItem() {
                         <span className={cx('special-price')}>
                             <span className={cx('product-price')}>395.000₫</span>
                         </span>
+                        {decPercent && (
+                            <span classNames={cx('product-item-price-sale')}>
+                                <span className={cx('product-price-old')}>395.000₫</span>
+                            </span>
+                        )}
                     </div>
                 </div>
             </div>

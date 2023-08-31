@@ -2,10 +2,18 @@ import classNames from 'classnames/bind';
 import styles from './Modal.module.scss';
 import ReactDOM from 'react-dom';
 import Button from '../../../components/Button/Button';
+import Slider from 'react-slick';
 
 const cx = classNames.bind(styles);
 
 function Modal({ isShowing, hide }) {
+    const slickSettings = {
+        dots: true,
+        infinite: true,
+        // speed: 1000,
+        // autoplay: true,
+        slidesToShow: 2,
+    };
     return isShowing
         ? ReactDOM.createPortal(
               <div>
@@ -16,14 +24,36 @@ function Modal({ isShowing, hide }) {
                                   <div className={cx('row')}>
                                       <div className={cx('col l-5 m-0 c-0')}>
                                           <div className={cx('product-left')}>
-                                              <div className={cx('view-full-size')}>
-                                                  <a className={cx('img-product')} href="/">
-                                                      <img
-                                                          className={cx('product-featured-image-quickview')}
-                                                          src="https://bizweb.dktcdn.net/100/318/614/products/mt-2.jpg?v=1692784174187"
-                                                          alt="quickview"
-                                                      />
-                                                  </a>
+                                              <div className={cx('product-left-top')}>
+                                                  <div className={cx('view-full-size')}>
+                                                      <a className={cx('img-product')} href="/">
+                                                          <img
+                                                              className={cx('product-featured-image-quickview')}
+                                                              src="https://bizweb.dktcdn.net/100/318/614/products/mt-2.jpg?v=1692784174187"
+                                                              alt="quickview"
+                                                          />
+                                                      </a>
+                                                  </div>
+                                              </div>
+
+                                              <div className={cx('thumb-gallary')}>
+                                                  <Slider {...slickSettings}>
+                                                      <div className={cx('owl-item')}>
+                                                          <img
+                                                              className={cx('product-slick')}
+                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/mt-2-compressed-2.jpg"
+                                                              alt=""
+                                                          />
+                                                      </div>
+
+                                                      <div className={cx('owl-item')}>
+                                                          <img
+                                                              className={cx('product-slick')}
+                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/mt-2-compressed-2.jpg"
+                                                              alt=""
+                                                          />
+                                                      </div>
+                                                  </Slider>
                                               </div>
                                           </div>
                                       </div>

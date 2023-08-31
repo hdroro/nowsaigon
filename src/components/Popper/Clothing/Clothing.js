@@ -1,6 +1,5 @@
 import classNames from 'classnames/bind';
 import styles from './Clothing.module.scss';
-import { forwardRef } from 'react';
 
 const cx = classNames.bind(styles);
 
