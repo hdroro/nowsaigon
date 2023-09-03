@@ -3,6 +3,7 @@ import styles from './ProductItem.module.scss';
 import Button from '../../../components/Button/Button';
 import useModal from '../../../hooks/useModal';
 import Modal from '../Modal/Modal';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -26,7 +27,9 @@ function ProductItem({ isSalePrice, decPercent }) {
                         alt=""
                     />
                     <div className={cx('btn-group')}>
-                        <Button primary>Tùy chọn</Button>
+                        <Link to={'/products/buggy-car-tee-black'} className={cx('choose-btn')}>
+                            <Button primary>Tùy chọn</Button>
+                        </Link>
                         <Button primary onClick={toggle}>
                             Xem nhanh
                         </Button>

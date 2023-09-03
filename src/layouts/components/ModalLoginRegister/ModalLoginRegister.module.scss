@@ -1,0 +1,26 @@
+.modal-wrapper {
+    position: fixed;
+    right: 0;
+    top: 0 !important;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: absolute;
+    width: 634px;
+    top: 10%;
+    height: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 35px 30px 35px;
+    background-color: #fff;
+    z-index: 8011;
+    border-radius: 0px;
+}

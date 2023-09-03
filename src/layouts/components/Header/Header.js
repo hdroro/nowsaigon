@@ -8,6 +8,7 @@ import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PropperWrapper } from '../../../components/Popper';
 import Search from '../../../components/Popper/Search/Search';
 import Clothing from '../../../components/Popper/Clothing/Clothing';
+import { ModalLogin, ModalRegister } from '../ModalLoginRegister';
 import { useState } from 'react';
 const cx = classNames.bind(styles);
 
@@ -30,12 +31,46 @@ const MENU_NAV = [
     },
 ];
 
+const HEADER_ACC = [
+    {
+        title: 'Tài khoản',
+        link: '/account',
+    },
+    {
+        title: 'Đăng xuất',
+        link: '/',
+    },
+    {
+        title: 'Liên hệ',
+        link: '/lien-he',
+    },
+];
+
+// const HEADER_NO_ACC = [
+//     {
+//         title: 'Đăng ký',
+//         link: '#',
+//         toggle: false,
+//     },
+//     {
+//         title: 'Đăng nhập',
+//         link: '#',
+//         toggle: true,
+//     },
+//     {
+//         title: 'Liên hệ',
+//         link: '/lien-he',
+//     },
+// ];
+
 function Header() {
     const [show, setShow] = useState(false);
 
     const handleShow = () => {
         setShow(!show);
     };
+
+    let haveAcc = false;
 
     const renderResultSearch = (attrs) => (
         <div className={cx('menu')} tabIndex="-1" {...attrs}>
@@ -52,6 +87,20 @@ function Header() {
             </PropperWrapper>
         </div>
     );
+
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showRegisterModal, setShowRegisterModal] = useState(false);
+
+    // Function to toggle the login modal
+    const toggleLoginModal = () => {
+        setShowLoginModal(!showLoginModal);
+    };
+
+    // Function to toggle the register modal
+    const toggleRegisterModal = () => {
+        setShowRegisterModal(!showRegisterModal);
+    };
+
     return (
         <div>
             <div className={cx('wrapper-header')}>
@@ -65,13 +114,36 @@ function Header() {
 
                         <div className={cx('col l-6 m-6 c-6')}>
                             <ul className={cx('list-right')}>
-                                <Link to={'/account'} className={cx('list-item')}>
-                                    <li>Tài khoản</li>
-                                </Link>{' '}
-                                <li className={cx('list-item')}>Đăng xuất</li>
-                                <Link to={'/lien-he'} className={cx('list-item')}>
-                                    <li>Liên hệ</li>
-                                </Link>
+                                {haveAcc ? (
+                                    HEADER_ACC.map((item, key) => (
+                                        <Link to={item.link} className={cx('list-item')} key={key}>
+                                            <li>{item.title}</li>
+                                        </Link>
+                                    ))
+                                ) : (
+                                    <>
+                                        <Link to="#" className={cx('list-item')}>
+                                            <li onClick={toggleRegisterModal}>Đăng ký</li>
+                                            {showRegisterModal && (
+                                                <ModalRegister
+                                                    isShowing={showRegisterModal}
+                                                    hide={toggleRegisterModal}
+                                                />
+                                            )}
+                                        </Link>
+
+                                        <Link to="#" className={cx('list-item')}>
+                                            <li onClick={toggleLoginModal}>Đăng nhập</li>
+                                            {showLoginModal && (
+                                                <ModalLogin isShowing={showLoginModal} hide={toggleLoginModal} />
+                                            )}
+                                        </Link>
+
+                                        <Link to="/lien-he" className={cx('list-item')}>
+                                            <li>Liên hệ</li>
+                                        </Link>
+                                    </>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -150,7 +222,9 @@ function Header() {
                                     </Tippy>
                                 </div>
                                 <div className={cx('top-cart')}>
-                                    <FontAwesomeIcon icon={faBagShopping} />
+                                    <Link to="/cart">
+                                        <FontAwesomeIcon icon={faBagShopping} />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

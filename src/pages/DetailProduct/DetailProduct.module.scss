@@ -1,48 +1,19 @@
-.modal-wrapper {
-    position: fixed;
-    right: 0;
-    top: 0 !important;
-    z-index: 9999;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.modal {
-    position: absolute;
-    width: 1030px;
-    top: 3%;
-    height: auto;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    padding: 35px 30px 35px;
-    background-color: #fff;
-    z-index: 8011;
-    border-radius: 0px;
-}
-
 .product-left {
     overflow: hidden;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .product-left-top {
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 10px;
-    border: solid 1px #ebebeb;
+    // border: solid 1px #ebebeb;
 }
 
 .view-full-size {
     position: relative;
-    max-width: 350px;
     display: block;
-    margin: 0 40px;
-    padding: 10px;
 }
 .product-featured-image-quickview {
     width: 100%;
@@ -161,11 +132,16 @@
         cursor: pointer;
     }
 }
+.header-count {
+    font-size: 14px;
+    margin-top: 25px;
+    color: #333;
+}
 
 .quantity-wanted-p {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .input-number-product {
@@ -215,7 +191,8 @@
     margin-top: 6px;
     height: 100px;
     padding: 10px 5px;
-    // display: flex;
+    display: flex;
+    justify-content: center;
 }
 
 .owl-stage-inner {
@@ -239,4 +216,53 @@
 
 .containerr {
     display: flex !important;
+}
+
+.tab-width-full {
+    width: 100%;
+    margin: 0 12px;
+    margin-top: 30px;
+}
+
+.header-decription {
+    /* padding: 0 12px; */
+    line-height: 50px;
+    width: 120px;
+    text-align: center;
+    background: var(--red);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.tab-float {
+    width: 100%;
+    display: block;
+    float: left;
+}
+.tab-content {
+    padding: 25px 0px;
+    background: #fff;
+    border: solid 1px #ebebeb;
+}
+.rte {
+    font-family: 'Arial';
+    color: #333;
+    font-weight: 300;
+    font-size: 14px;
+    width: 100%;
+    padding: 0px 25px;
+
+    p {
+        margin: 0 0 15px;
+
+        strong {
+            font-weight: bold;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }

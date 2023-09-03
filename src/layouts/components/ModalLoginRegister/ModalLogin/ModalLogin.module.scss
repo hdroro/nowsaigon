@@ -1,0 +1,36 @@
+.modal p {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.input-control {
+    border: 1px solid #ebebeb;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+    margin-bottom: 20px;
+}
+
+.more-log {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+    display: block;
+}
+
+.register-form {
+    text-decoration: underline;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--blue);
+    }
+}

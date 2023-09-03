@@ -45,6 +45,9 @@
     transition: display 3ms ease-in-out;
 }
 
+.choose-btn {
+    margin-right: 15px;
+}
 .btn-group {
     position: absolute;
     opacity: 0; /* Ban đầu ẩn .btn-group */

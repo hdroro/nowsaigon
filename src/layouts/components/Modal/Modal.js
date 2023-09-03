@@ -3,6 +3,9 @@ import styles from './Modal.module.scss';
 import ReactDOM from 'react-dom';
 import Button from '../../../components/Button/Button';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -10,9 +13,30 @@ function Modal({ isShowing, hide }) {
     const slickSettings = {
         dots: true,
         infinite: true,
-        // speed: 1000,
-        // autoplay: true,
-        slidesToShow: 2,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: (
+            <div>
+                <div className={cx('next-slick-arrow')}> ⫸ </div>
+            </div>
+        ),
+        prevArrow: (
+            <div>
+                <div className={cx('prev-slick-arrow')}> ⫷ </div>
+            </div>
+        ),
+    };
+
+    const [currentImage, setCurrentImage] = useState(
+        'https://bizweb.dktcdn.net/100/318/614/products/mt-2.jpg?v=1692784174187',
+    );
+
+    const handleChangeImg = (event) => {
+        const newImageUrl = event.target.src;
+        if (newImageUrl) {
+            setCurrentImage(newImageUrl);
+        }
     };
     return isShowing
         ? ReactDOM.createPortal(
@@ -29,8 +53,9 @@ function Modal({ isShowing, hide }) {
                                                       <a className={cx('img-product')} href="/">
                                                           <img
                                                               className={cx('product-featured-image-quickview')}
-                                                              src="https://bizweb.dktcdn.net/100/318/614/products/mt-2.jpg?v=1692784174187"
+                                                              src={currentImage}
                                                               alt="quickview"
+                                                              id={cx('main-img')}
                                                           />
                                                       </a>
                                                   </div>
@@ -38,7 +63,7 @@ function Modal({ isShowing, hide }) {
 
                                               <div className={cx('thumb-gallary')}>
                                                   <Slider {...slickSettings}>
-                                                      <div className={cx('owl-item')}>
+                                                      <div className={cx('owl-item')} onClick={handleChangeImg}>
                                                           <img
                                                               className={cx('product-slick')}
                                                               src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/mt-2-compressed-2.jpg"
@@ -46,10 +71,34 @@ function Modal({ isShowing, hide }) {
                                                           />
                                                       </div>
 
-                                                      <div className={cx('owl-item')}>
+                                                      <div className={cx('owl-item')} onClick={handleChangeImg}>
                                                           <img
                                                               className={cx('product-slick')}
-                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/mt-2-compressed-2.jpg"
+                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/ms-compressed-3.jpg"
+                                                              alt=""
+                                                          />
+                                                      </div>
+
+                                                      <div className={cx('owl-item')} onClick={handleChangeImg}>
+                                                          <img
+                                                              className={cx('product-slick')}
+                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/details-2-compressed-3.jpg"
+                                                              alt=""
+                                                          />
+                                                      </div>
+
+                                                      <div className={cx('owl-item')} onClick={handleChangeImg}>
+                                                          <img
+                                                              className={cx('product-slick')}
+                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/details-1-compressed-3.jpg"
+                                                              alt=""
+                                                          />
+                                                      </div>
+
+                                                      <div className={cx('owl-item')} onClick={handleChangeImg}>
+                                                          <img
+                                                              className={cx('product-slick')}
+                                                              src="https://bizweb.dktcdn.net/thumb/large/100/318/614/products/5-compressed-1-7b9cef71-495d-4e12-875d-6fed0cf45f0e.jpg"
                                                               alt=""
                                                           />
                                                       </div>

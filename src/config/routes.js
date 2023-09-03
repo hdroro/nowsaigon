@@ -6,6 +6,8 @@ const routes = {
     contact: '/contact',
     lienhe: '/lien-he',
     sale: '/sale',
+    cart: '/cart',
+    detail: '/products/:name',
 };
 
 export default routes;
