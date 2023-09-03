@@ -240,3 +240,8 @@
 .containerr {
     display: flex !important;
 }
+
+.selected {
+    background-color: var(--red);
+    color: #fff;
+}

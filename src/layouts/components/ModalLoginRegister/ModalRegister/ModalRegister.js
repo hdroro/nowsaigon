@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 function ModalLogin({ isShowing, hide }) {
     return (
-        <ModalLoginRegister isShowing={isShowing}>
+        <ModalLoginRegister isShowing={isShowing} hide={hide}>
             <div className={cx('modal')}>
                 <p>Đăng ký tài khoản</p>
                 <form method="post" action="/account/register">

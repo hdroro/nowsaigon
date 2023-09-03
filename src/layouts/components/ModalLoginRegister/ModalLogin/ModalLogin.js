@@ -5,10 +5,9 @@ import Button from '../../../../components/Button/Button';
 
 const cx = classNames.bind(styles);
 
-function ModalLogin({ isShowing, hide, isCheck }) {
-    console.log(isCheck);
+function ModalLogin({ isShowing, hide }) {
     return (
-        <ModalLoginRegister isShowing={isShowing}>
+        <ModalLoginRegister isShowing={isShowing} hide={hide}>
             <div className={cx('modal')}>
                 <p>Đăng nhập tài khoản</p>
                 <form method="post" action="/account/login">

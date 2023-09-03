@@ -16,6 +16,17 @@ function DetailProduct() {
             setCurrentImage(newImageUrl);
         }
     };
+
+    const [value, setValue] = useState(1);
+    const handleUp = () => {
+        setValue(value + 1);
+    };
+
+    const handleDown = () => {
+        if (value > 0) {
+            setValue(value - 1);
+        }
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('grid', 'wide')}>
@@ -169,10 +180,14 @@ function DetailProduct() {
                             <div className={cx('header-count')}>Số lượng:</div>
                             <div className={cx('quantity-wanted-p')}>
                                 <div className={cx('input-number-product')}>
-                                    <input className={cx('input-left')} defaultValue="1" />
+                                    <input className={cx('input-left')} value={value} />
                                     <span className={cx('input-right')}>
-                                        <div className={cx('upper')}>+</div>
-                                        <div className={cx('lower')}>-</div>
+                                        <div className={cx('upper')} onClick={handleUp}>
+                                            +
+                                        </div>
+                                        <div className={cx('lower')} onClick={handleDown}>
+                                            -
+                                        </div>
                                     </span>
                                 </div>
 
