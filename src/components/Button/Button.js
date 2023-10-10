@@ -17,6 +17,7 @@ function Button({
     disabled = false,
     small = false,
     large = false,
+    type = true,
     children,
     className,
     leftIcon,
@@ -39,6 +40,10 @@ function Button({
         });
     }
 
+    if (type) {
+        props.type = 'submit';
+    }
+
     if (to) {
         props.to = to;
         Comp = Link;
@@ -57,6 +62,7 @@ function Button({
         disabled,
         small,
         large,
+        type,
     });
     return (
         <Comp className={classes} {...props}>

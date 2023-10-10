@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 function FormAddress({ text }) {
     return (
         <div className={cx('add-address')}>
-            <form action="/account/addresses">
+            <form method="post" action="/account/addresses">
                 <div className={cx('grid', 'wide')}>
                     <div className={cx('row')}>
                         <div className={cx('col l-12 m-12 c-12')}>
@@ -103,8 +103,10 @@ function FormAddress({ text }) {
 
                         <div className={cx('col l-12 m-12 c-12')}>
                             <div className={cx('btn-group')}>
-                                <Button primary>{text}</Button>
-                                <Button primary small>
+                                <Button primary type>
+                                    {text}
+                                </Button>
+                                <Button primary small type>
                                     Hủy
                                 </Button>
                             </div>

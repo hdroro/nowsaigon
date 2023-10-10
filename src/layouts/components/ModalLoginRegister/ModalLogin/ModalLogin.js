@@ -13,7 +13,13 @@ function ModalLogin({ isShowing, hide }) {
                 <form method="post" action="/account/login">
                     <div className={cx('row')}>
                         <div className={cx('col l-12 m-12 c-12')}>
-                            <input type="text" className={cx('input-control')} placeholder="Email" name="email" />
+                            <input
+                                type="text"
+                                className={cx('input-control')}
+                                placeholder="Email"
+                                name="email"
+                                defaultValue=""
+                            />
                         </div>
                         <div className={cx('col l-12 m-12 c-12')}>
                             <input
@@ -21,22 +27,25 @@ function ModalLogin({ isShowing, hide }) {
                                 className={cx('input-control')}
                                 placeholder="Mật khẩu"
                                 name="password"
+                                defaultValue=""
                             />
                         </div>
                         <div className={cx('col l-12 m-12 c-12')}>
-                            <Button primary>ĐĂNG NHẬP</Button>
+                            <Button primary type>
+                                ĐĂNG NHẬP
+                            </Button>
+                        </div>
+                    </div>
+
+                    <div className={cx('row')}>
+                        <div className={cx('col l-12 m-12 c-12')}>
+                            <div className={cx('more-log')}>
+                                Nếu bạn chưa có tài khoản, vui lòng đăng ký{' '}
+                                <span className={cx('register-form')}>tại đây</span>
+                            </div>
                         </div>
                     </div>
                 </form>
-
-                <div className={cx('row')}>
-                    <div className={cx('col l-12 m-12 c-12')}>
-                        <div className={cx('more-log')}>
-                            Nếu bạn chưa có tài khoản, vui lòng đăng ký{' '}
-                            <span className={cx('register-form')}>tại đây</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </ModalLoginRegister>
     );

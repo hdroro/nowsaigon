@@ -1,5 +1,5 @@
 //Layouts
-import config from '../config';
+import config from '../config/index';
 import Clothing from '../pages/Clothing/Clothing';
 import { HeaderSidebar } from '../layouts';
 //Pages
